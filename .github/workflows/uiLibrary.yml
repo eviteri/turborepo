@@ -1,4 +1,4 @@
-# name: deploy-@eviteri/ui
+# name: deploy-@eviteri/turborepo
 
 # on:
 #   push:

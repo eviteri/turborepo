@@ -1,5 +1,5 @@
 {
-  "name": "@eviteri/ui",
+  "name": "@eviteri/turborepo",
   "author": "Eloy Viteri",
   "description": "Turbo Repo UI library",
   "version": "1.0.0",
@@ -27,3 +27,4 @@
     "typescript": "^4.5.2"
   }
 }
+
