@@ -38,11 +38,9 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Switching to /packages/ui directory
-        run:
-          working-directory: packages/ui/dist
-
       - name: Publish UI Package
-        run: npm publish
+        run: |
+          cd ./packages/ui/dist
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.ACCESS_TOKEN}}
