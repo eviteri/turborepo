@@ -1,5 +1,9 @@
 {
   "extends": "tsconfig/react-library.json",
+  "compilerOptions": {
+    "outDir": "dist/",
+    "jsx": "react"
+  },
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
 }

@@ -13,7 +13,7 @@
   "scripts": {
     "dev": "tsc --watch --outDir dist",
     "prebuild": "rm -rf ./dist",
-    "build": "tsc --outDir dist && npm run build:copyAssets",
+    "build": "tsc && npm run build:copyAssets",
     "build:copyAssets": "cp ./package.json ./dist/ && cp ./README.md ./dist/",
     "lint": "eslint *.ts*"
   },
