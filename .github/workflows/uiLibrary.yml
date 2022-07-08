@@ -23,7 +23,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: "@eviteri"
       - run: npm install
-      - run: npx turbo run build --filter=@eviteri/ui --force
+      - run: npm run build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.ACCESS_TOKEN}}
