@@ -1,0 +1,23 @@
+{
+  "name": "@eviteri/ui",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc --watch --outDir dist",
+    "prebuild": "rm -rf ./dist",
+    "build": "npm run prebuild && tsc --outDir dist",
+    "build:copyAssets": "cp ./package.json ./dist/ && cp ./README.md ./dist/",
+    "lint": "eslint *.ts*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "*",
+    "react": "^18.2.0",
+    "tsconfig": "*",
+    "typescript": "^4.5.2"
+  }
+}
