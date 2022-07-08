@@ -41,6 +41,6 @@ jobs:
       - name: Publish UI Package
         run: |
           cd ./packages/ui/dist
-          npm publish
+          npm publish --registry=https://npm.pkg.github.com/
         env:
           NODE_AUTH_TOKEN: ${{secrets.ACCESS_TOKEN}}
