@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: 15
           registry-url: https://npm.pkg.github.com/
-          scope: "@eviteri"
+          scope: "@eviteri/turborepo"
           cache: "npm"
 
       - name: Install dependencies
