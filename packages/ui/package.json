@@ -5,7 +5,11 @@
   "version": "1.0.0",
   "license": "MIT",
   "private": false,
-  "repository":"https://github.com/@eviteri/turborepo",
+  "repository" : {
+    "type" : "git",
+    "registry": "https://npm.pkg.github.com/@eviteri/turborepo",
+    "directory": "packages/turborepo-ui"
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
