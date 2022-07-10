@@ -5,9 +5,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "private": false,
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@eviteri"
-  },
+  "repository":"https://github.com/@eviteri/turborepo",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
