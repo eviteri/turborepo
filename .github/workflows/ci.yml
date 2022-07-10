@@ -27,16 +27,12 @@ jobs:
           fetch-depth: 2
 
       - name: Setup Node.js environment
-      - uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
-          node-version: 12
-          cache: "npm"
+          node-version: 15
           registry-url: https://npm.pkg.github.com/
           scope: "@eviteri"
-        # uses: actions/setup-node@v2
-        # with:
-        #   node-version: 16
-        #   cache: "npm"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
