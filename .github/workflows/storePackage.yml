@@ -2,9 +2,10 @@ name: turborepo-store
 
 on:
   push:
-    branches: ["main"]
-  paths:
-    - "packages/store/**"
+    branches:
+      - main
+    paths:
+      - "packages/store/**"
 
 jobs:
   build:

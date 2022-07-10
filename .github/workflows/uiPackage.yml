@@ -2,9 +2,10 @@ name: turborepo-ui
 
 on:
   push:
-    branches: ["main"]
-  paths:
-    - "packages/ui/**"
+    branches:
+      - main
+    paths:
+      - "packages/ui/**"
 
 jobs:
   build:
