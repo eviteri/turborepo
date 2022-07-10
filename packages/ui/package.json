@@ -1,12 +1,12 @@
 {
-  "name": "@eviteri/ui",
+  "name": "@eviteri/turborepo-ui",
   "author": "Eloy Viteri",
   "description": "Turbo Repo UI library",
   "version": "1.0.0",
   "license": "MIT",
   "private": false,
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@eviteri/turborepo"
+    "registry": "https://npm.pkg.github.com/@eviteri"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
