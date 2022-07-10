@@ -7,7 +7,7 @@
   "private": false,
   "repository" : {
     "type" : "git",
-    "url": "https://npm.pkg.github.com/@eviteri/turborepo",
+    "url": "git+https://github.com/eviteri/turborepo.git",
     "directory": "packages/turborepo-ui"
   },
   "main": "./dist/index.js",
