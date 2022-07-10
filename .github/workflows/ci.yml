@@ -30,7 +30,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 15
-          registry-url: https://npm.pkg.github.com/@eviteri/turborepo
+          registry-url: https://npm.pkg.github.com/
+          scope: "@eviteri"
           cache: "npm"
 
       - name: Install dependencies
