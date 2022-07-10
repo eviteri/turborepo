@@ -1,10 +1,10 @@
-name: CI
+name: turborepo-store
 
 on:
   push:
     branches: ["main"]
-  pull_request:
-    types: [opened, synchronize]
+  paths:
+    - "packages/store/**"
 
 jobs:
   build:
@@ -38,11 +38,10 @@ jobs:
         run: npm i
 
       - name: Build
-        working-directory: ./packages/ui/
         run: npm run build
 
       - name: Publish UI Package
-        working-directory: ./packages/ui/
+        working-directory: ./packages/store/
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.ACCESS_TOKEN}}
