@@ -18,7 +18,7 @@ jobs:
     #  TURBO_REMOTE_ONLY: true
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-latest]
 
     steps:
       - name: Check out code
@@ -33,7 +33,7 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
         working-directory: ./packages/ui/
