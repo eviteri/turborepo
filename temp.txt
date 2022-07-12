@@ -1,0 +1,69 @@
+{
+  "name": "@eviteri/turborepo-store",
+  "author": "Eloy Viteri",
+  "description": "Turbo Repo UI library",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": false,
+  "repository" : {
+    "type" : "git",
+    "url": "git+https://github.com/eviteri/turborepo.git",
+    "directory": "packages/turborepo-store"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "tsc --watch --outDir dist",
+    "prebuild": "rm -rf ./dist",
+    "build": "tsc && npm run build:copyAssets",
+    "build:copyAssets": "cp ./package.json ./dist/ && cp ./README.md ./dist/",
+    "lint": "eslint *.ts*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "*",
+    "react": "^18.2.0",
+    "tsconfig": "*",
+    "typescript": "^4.5.2"
+  }
+}
+
+{
+  "name": "@eviteri/turborepo-ui",
+  "author": "Eloy Viteri",
+  "description": "Turbo Repo UI library",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": false,
+  "repository" : {
+    "type" : "git",
+    "url": "git+https://github.com/eviteri/turborepo.git",
+    "directory": "packages/turborepo-ui"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "tsc --watch --outDir dist",
+    "prebuild": "rm -rf ./dist",
+    "build": "tsc && npm run build:copyAssets",
+    "build:copyAssets": "cp ./package.json ./dist/ && cp ./README.md ./dist/",
+    "lint": "eslint *.ts*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "*",
+    "react": "^18.2.0",
+    "tsconfig": "*",
+    "typescript": "^4.5.2"
+  }
+}
+
+
+@eviteri/turborepo-card
+@eviteri/turborepo-movies
+@eviteri/turborepo-playlist
+@eviteri/turborepo-store

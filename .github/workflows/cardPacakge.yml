@@ -1,11 +1,11 @@
-name: turborepo-store
+name: turborepo-card
 
 on:
   push:
     branches:
       - main
     paths:
-      - "packages/store/**"
+      - "packages/card/**"
 
 jobs:
   build:
@@ -39,11 +39,11 @@ jobs:
         run: npm i
 
       - name: Build
-        working-directory: ./packages/store/
+        working-directory: ./packages/card/
         run: npm run build
 
       - name: Publish UI Package
-        working-directory: ./packages/store/
+        working-directory: ./packages/card/
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.ACCESS_TOKEN}}

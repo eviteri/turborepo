@@ -1,9 +1,35 @@
-import React from 'react';
-import {Button} from '@eviteri/turborepo-ui'
-import {Button as StoreButton} from '@eviteri/turborepo-store'
+import React from "react";
+import { AppShell } from "@eviteri/turborepo-ui";
 
-const App: React.FC = () => {
-  return (<div> <Button /><StoreButton /></div>)
+import { Playlist } from "@eviteri/turborepo-playlist";
+import { MoviesContent } from "@eviteri/turborepo-movies";
+
+function App() {
+  return (
+    <AppShell
+      title="Movies"
+      routes={[
+        {
+          path: "/",
+          element: MoviesContent,
+        },
+        {
+          path: "/playlist",
+          element: Playlist,
+        },
+      ]}
+      navLinks={[
+        {
+          label: "Home",
+          path: "/",
+        },
+        {
+          label: "Playlist",
+          path: "/playlist",
+        },
+      ]}
+    />
+  );
 }
 
 export default App;

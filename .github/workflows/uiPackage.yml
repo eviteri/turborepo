@@ -39,6 +39,7 @@ jobs:
         run: npm i
 
       - name: Build
+        working-directory: ./packages/ui/
         run: npm run build
 
       - name: Publish UI Package

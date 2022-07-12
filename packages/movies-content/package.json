@@ -1,7 +1,7 @@
 {
-  "name": "@eviteri/turborepo-store",
+  "name": "@eviteri/turborepo-movies",
   "author": "Eloy Viteri",
-  "description": "Turbo Repo Store library",
+  "description": "Turbo Repo Movies library",
   "version": "1.0.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -9,7 +9,7 @@
   "repository" : {
     "type" : "git",
     "url": "git+https://github.com/eviteri/turborepo.git",
-    "directory": "packages/turborepo-store"
+    "directory": "packages/turborepo-movies"
   },
   "scripts": {
     "dev": "tsc --watch --outDir dist",
@@ -23,10 +23,14 @@
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
     "react": "^18.2.0",
+    "@eviteri/turborepo-store": "*",
+    "@eviteri/turborepo-card": "*",
     "tsconfig": "*",
     "typescript": "^4.5.2"
   },
   "dependencies": {
-    "zustand": "4.0.0-rc.1"
+    "@mantine/core": "^4.2.6",
+    "@mantine/hooks": "^4.2.6",
+    "react-router-dom": "^6.3.0"
   }
 }
