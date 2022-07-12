@@ -1,0 +1,49 @@
+name: turborepo-movies
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "packages/movies-content/**"
+
+jobs:
+  build:
+    name: Build and Deploy
+    timeout-minutes: 15
+    runs-on: ${{ matrix.os }}
+    # To use Remote Caching, uncomment the next lines and follow the steps below.
+    # env:
+    #  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+    #  TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+    #  TURBO_REMOTE_ONLY: true
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 15
+          registry-url: https://npm.pkg.github.com/
+          scope: "@eviteri"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Build
+        working-directory: ./packages/movies-content/
+        run: npm run build
+
+      - name: Publish UI Package
+        working-directory: ./packages/movies-content/
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.ACCESS_TOKEN}}
